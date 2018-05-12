@@ -10,5 +10,5 @@ CREATE TABLE bay_items (
   price DECIMAL(10,2) NULL
 );
 
-INSERT INTO bay_items (item, description_Item, price)
-VALUES ("Iphone", "Iphone 6s+", 300);
+-- INSERT INTO bay_items (item, description_Item, price)
+-- VALUES ("Iphone", "Iphone 6s+", 300);
