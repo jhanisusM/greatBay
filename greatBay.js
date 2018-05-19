@@ -23,7 +23,37 @@ inquirer.prompt([
     connection.connect(function (err) {
         if (err) throw err;
         console.log("connected as id " + connection.threadId);
+        postOrBidSelector();
         connection.end();
     });
 });
+
+function postOrBidSelector() {
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "userOption",
+            message: "Please select from the follwoing:",
+            choices: ["Post Item", "Place Bid"]
+        }
+    ]).then(function (answers) {
+        let userOption = answers.userOption;
+        if (userOption == "Post Item") {
+            console.log("Post item f(x)")
+        }
+        console.log("Place Bid f(x)");
+
+    });
+};
+
+
+function bid (){
+    console.log("this is f(x) bid");
+
+};
+
+function post () {
+    console.log("this is f(x) post item")
+    
+};
 
